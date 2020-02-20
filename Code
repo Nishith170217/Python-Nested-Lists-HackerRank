@@ -1,0 +1,14 @@
+n=int(input())
+student=list()
+for i in range(n):
+    student.append([input(),float(input())])
+    
+scores = set([student[x][1] for x in range(n)])
+scores = list(scores)
+scores.sort()
+
+student = [x[0] for x in student if x[1] == scores[1]]
+student.sort()
+
+for s in student:
+    print(s)
